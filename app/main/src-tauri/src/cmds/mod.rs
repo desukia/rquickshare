@@ -10,3 +10,12 @@ mod send_payload;
 pub use send_payload::*;
 mod send_to_rs;
 pub use send_to_rs::*;
+mod change_download_path;
+pub use change_download_path::*;
+mod discovery;
+pub use discovery::*;
+mod auth;
+pub use auth::*;
+mod devices;
+pub use devices::*;
+
