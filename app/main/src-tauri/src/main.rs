@@ -41,6 +41,23 @@ pub struct AppState {
     pub rqs: Mutex<RQS>,
 }
 
+.invoke_handler(tauri::generate_handler![
+    // Comandos existentes
+    cmds::change_download_path,
+    cmds::start_discovery,
+    cmds::stop_discovery,
+    cmds::get_hostname,
+    cmds::send_payload,
+    
+    // NOVOS COMANDOS
+    cmds::google_login_url,
+    cmds::google_exchange_code,
+    cmds::get_user_profile,
+    cmds::list_devices,
+    cmds::trust_device,
+    cmds::get_device_contacts,
+])
+
 #[tokio::main]
 async fn main() -> Result<(), anyhow::Error> {
     // Define tauri async runtime to be tokio
